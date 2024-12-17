@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <title>Fast Steel Frame - Pisos Vinilicos</title>
+</head>
+<body>
+
+    <style>
+
+        :root{
+            --color--white: #fbfbfb;
+            --color--black: #010101;
+            --color--marron: #A98259;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", serif;
+        }
+
+        html, body{
+            font-family: "Roboto", serif;
+        }
+
+        .home{
+            width: 100%;
+            height: 100vh;
+            max-width: 1840px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+        }
+
+        .home-background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9d79c129-5979-4572-8217-9b2434f88500/public');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .home-background::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/9d79c129-5979-4572-8217-9b2434f88500/public');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            opacity: .4;
+            background: #000000;
+            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 20% 100%);
+        }
+
+        .home-text{
+            padding-left: 25%;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .home-text h1{
+            font-size: 48px;
+            font-weight: 100;
+            color: var(--color--white);
+            font-family: "Inter", serif;
+        }
+
+        .home-text span{
+            font-size: 16px;
+            font-weight: 100;
+            margin-top: -15px;
+            color: var(--color--white);
+            opacity: .8;
+            font-family: "Inter", serif;
+        }
+
+        .home-text button{
+            background-color: var(--color--white);
+            padding: 12px 15px;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+
+        .home-text button:hover{
+            background-color: transparent;
+            color: var(--color--white);
+            border: 1px solid var(--color--white);
+        }
+    </style>
+
+    <section class="home" id="home">
+        <div class="home-background"></div>
+        <div class="home-text">
+            <h1>Pisos Vinilicos</h1>
+            <span>Adquira qualidade</span>
+            <button>
+                Comprar agora
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+<!-- Fim da seção home -->
+
+    <style>
+        .diferenca{
+            width: 100%;
+            height: 100vh;
+            max-width: 1140px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+            margin-bottom: 10vh;
+        }
+
+        .diferenca-top{
+            height: 30%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .diferenca-top div:nth-child(1){
+            width: 60%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .diferenca-top div:nth-child(1) h1{
+            font-weight: 300;
+            font-size: 32px;
+            color: var(--color--black);
+            font-family: "Inter", serif;
+        }
+
+        .diferenca-top div:nth-child(1) p{
+            font-size: 16px;
+            font-family: "Inter", serif;
+            font-weight: 200;
+        }
+
+        .diferenca-top div:nth-child(2) button{
+            background-color: var(--color--black);
+            padding: 12px 15px;
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 25px;
+            cursor: pointer;
+            transition: all .2s ease;
+            color: var(--color--white);
+        }
+
+        .diferenca-top div:nth-child(2) button:hover{
+            background-color: transparent;
+            color: var(--color--black);
+            border: 1px solid var(--color--black);
+
+        }
+
+        .diferenca-bottom{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 70%;
+        }
+
+        .diferenca-bottom div:nth-child(1){
+            width: 50%;
+            height: 100%;
+        }
+
+        .diferenca-bottom div:nth-child(1) img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .diferenca-bottom div:nth-child(2){
+            width: 50%;
+            height: 100%;
+            padding: 0 5% 0 2.5%;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(1){
+            width: 100%;
+            height: 30%;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(1) h1{
+            font-weight: 200;
+            font-size: 24px;
+            color: var(--color--black);
+            font-family: "Inter", serif;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(1) h1 b{
+            font-weight: 400;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(1) p {
+            font-size: 14px;
+            font-weight: 200;
+            font-family: "Inter", serif;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(2){
+            padding: 0%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            width: 100%;
+            height: 60%;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(2) div{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(2) div img{
+            width: 100%;
+            height: 92%;
+            object-fit: contain;
+            background-color: #00000005;
+            padding: 50px;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(2) div span{
+            width: 100%;
+            height: 8%;
+            background-color: var(--color--marron);
+            display: flex;
+            align-items: center;
+            padding: 0 10px;
+            color: var(--color--white);
+            font-weight: 200;
+            font-size: 14px;
+        }
+    </style>
+
+    <section class="diferenca" id="diferencas">
+        <div class="diferenca-top">
+            <div>
+                <h1>O que é?</h1>
+                <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+            </div>
+            <div>
+                <button>
+                    Comprar agora
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="diferenca-bottom">
+            <div>
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/68023e87-e33e-49c8-f3e1-df2a17714d00/public" >
+            </div>
+            <div>
+                <div>
+                    <h1>Diferença entre <b>Piso Vinilico</b> e <b>Piso tradicional</b></h1>
+                    <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+                </div>
+                <div>
+                    <div>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
+                        <span>Piso Vinilico</span>
+                    </div>
+                    <div>
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/cdde02b4-e77d-44f7-c324-6119ab65fa00/public">
+                        <span>Piso Tradicional</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Fim da seção de diferenças -->
+
+    <style>
+
+        .produtos{
+            width: 100%;
+            height: 80vh;
+            max-width: 1140px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+            background-color: var(--color--black);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 2.5% 5%;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .produtos-text{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--color--white);
+            height: 20%;
+        }
+
+        .produtos-text h1{
+            font-weight: 100;
+            font-size: 32px;
+            font-family: "Inter", serif;
+        }
+
+        .produtos-text h1 b{
+            font-weight: 100;
+            color: var(--color--marron);
+        }
+
+        .produtos-text p{
+            font-size: 16px;
+            font-weight: 100;
+            opacity: .8;
+            font-family: "Inter", serif;
+        }
+
+        .produtos-text button{
+            background-color: transparent;
+            color: var(--color--white);
+            border: none;
+            font-size: 40px;
+            opacity: .8;
+            cursor: pointer;
+        }
+
+        .produtos-cards {
+            width: 100%;
+            padding: 20px 0;
+            overflow: hidden;
+            height: 80%;
+        }
+
+        .produtos-card {
+            width: 100%;
+            height: 50vh;
+            background-color: var(--color--white);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .produtos-card img{
+            width: 100%;
+            height: 90%;
+            object-fit: contain;
+            padding: 35px;
+            background-color: #00000005;
+        }
+
+        .produtos-card div{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            align-items: center;
+            padding: 0 15px;
+            height: 10%;
+            background-color: var(--color--marron);
+        }
+
+        .produtos-card div span{
+            font-size: 14px;
+            font-weight: 200;
+            font-family: "Inter", serif;
+            color: var(--color--white);
+        }
+
+        .produtos-card div button{
+            background-color: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 5px;
+            color: var(--color--white);
+            font-size: 12px;
+            font-weight: 200;
+            opacity: .8;
+            font-family: "Inter", serif;
+            cursor: pointer;
+        }
+
+    </style>
+
+    <section class="produtos" id="produtos">
+        <div class="produtos-text">
+            <div>
+                <h1>Conheça nossos <b>pisos</b></h1>
+                <p>Separamos apenas os melhores</p>
+            </div>
+            <div>
+                <button>
+                    <i class="bi bi-arrow-right"></i>
+                </button>
+            </div>
+        </div>
+        <div class="produtos-cards">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide produtos-card">
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
+                        <div>
+                            <span>Nome do piso</span>
+                            <button>
+                                Comprar agora
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide produtos-card">
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
+                        <div>
+                            <span>Nome do piso</span>
+                            <button>
+                                Comprar agora
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide produtos-card">
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
+                        <div>
+                            <span>Nome do piso</span>
+                            <button>
+                                Comprar agora
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="swiper-slide produtos-card">
+                        <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
+                        <div>
+                            <span>Nome do piso</span>
+                            <button>
+                                Comprar agora
+                                <i class="bi bi-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script>
+        // Inicializando o Swiper
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: '3', // Exibe os slides com largura automática
+            spaceBetween: 20, // Espaço entre os cards
+            centeredSlides: true, // Centraliza o slide ativo
+            loop: true, // Habilita o loop infinito
+            slideToClickedSlide: true, // Permite ir para o slide clicado
+        });
+    </script>
+    
+<!-- Fim da seção de produtos -->
+
+    <style>
+        .beneficios{
+            width: 100%;
+            max-width: 1140px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+            height: 100vh;
+            padding: 0.5% 0%;
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        .beneficios-title{
+            height: 15%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            color: var(--color--white);
+        }
+
+        .beneficios-title h1{
+            font-weight: 200;
+            font-size: 28px;
+            width: 30%;
+            text-align: center;
+            line-height: 100%;
+        }
+
+        .beneficios-title h1 b{
+            font-weight: 200;
+            color: var(--color--marron);
+        }
+
+        .beneficios-container{
+            width: 100%;
+            height: 55%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 5%;
+        }
+
+        .beneficios-card{
+            width: 32%;
+            height: 100%;
+            padding: 25px;
+            background-color: var(--color--black);
+            color: var(--color--white);
+            gap: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .beneficios-card div:nth-child(1){
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 25px;
+            height: 20%;
+            width: 100%;
+        }
+
+        .beneficios-card div:nth-child(1) i {
+            font-size: 40px;
+            color: var(--color--marron);
+        }
+
+        .beneficios-card div:nth-child(1) h1 {
+            font-size: 20px;
+            font-weight: 200;
+            font-family: "Inter", serif;
+        }
+
+        .beneficios-card div:nth-child(2){
+            height: 80%;
+            width: 100%;
+        }
+
+        .beneficios-card div:nth-child(2) p {
+            font-size: 14px;
+            font-weight: 200;
+            opacity: .8;
+        }
+
+        .beneficios-cta{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 15%;
+        }
+
+        .beneficios-cta button{
+            background-color: var(--color--black);
+            color: var(--color--white);
+            border: 1px solid transparent;
+            padding: 12px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            border: none;
+            cursor: pointer;
+            transition: all .2s ease;
+        }
+
+        .beneficios-cta button i{
+            font-size: 14px;
+            opacity: 1;
+        }
+
+        .beneficios-cta button:hover{
+            background-color: transparent;
+            color: var(--color--black);
+            border: 1px solid var(--color--black);
+        }
+
+        .beneficios-cta i{
+            font-size: 32px;
+            opacity: .4;
+            cursor: pointer;
+        }
+    </style>
+
+    <section class="beneficios" id="beneficios">
+        <div class="beneficios-title">
+            <h1>Beneficios de <b>usar piso vinilicos</b></h1>
+        </div>
+        <div class="beneficios-container">
+            <div class="beneficios-card">
+                <div>
+                    <i class="bi bi-arrow-up"></i>
+                    <h1>Titulo</h1>
+                </div>
+                <div>
+                    <p>Descrição...</p>
+                </div>
+            </div>
+            <div class="beneficios-card">
+                <div>
+                    <i class="bi bi-arrow-up"></i>
+                    <h1>Titulo</h1>
+                </div>
+                <div>
+                    <p>Descrição...</p>
+                </div>
+            </div>
+            <div class="beneficios-card">
+                <div>
+                    <i class="bi bi-arrow-up"></i>
+                    <h1>Titulo</h1>
+                </div>
+                <div>
+                    <p>Descrição...</p>
+                </div>
+            </div>
+        </div>
+        <div class="beneficios-cta">
+            <button>
+                Comprar agora
+                <i class="bi bi-arrow-right"></i>
+            </button>
+            <i class="bi bi-arrow-down"></i>
+        </div>
+    </section>
+
+<!-- Fim da seção de beneficios -->
+
+    <style>
+        .fast{
+            width: 100%;
+            width: 1140px;
+            height: 100vh;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            padding-right: 25px;
+            padding-top: 100px;
+            flex-direction: column;
+        }
+
+        .fast-background{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/947958cc-bbcd-4eb3-5812-b655a8d93a00/public');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: -1;
+        }
+
+        .fast-background::before{
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: absolute;
+            background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/947958cc-bbcd-4eb3-5812-b655a8d93a00/public');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            z-index: 1;
+            opacity: .8;
+            background: #000000;
+            clip-path: polygon(15% 0, 100% 0, 100% 80%, 15% 80%);
+        }
+
+        .fast-titles{
+            width: 80%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-right: 5%;
+            height: 15%;
+        }
+
+        .fast-titles h1{
+            font-size: 32px;
+            font-weight: 200;
+            color: var(--color--white);
+            font-family: "Inter", serif;
+            line-height: 100%;
+            width: 50%;
+        }
+
+        .fast-titles h1 b {
+            font-weight: 300;
+            color: var(--color--marron);
+        }
+
+        .fast-titles p {
+            font-size: 14px;
+            color: var(--color--white);
+            font-weight: 200;
+            font-family: "Inter", serif;
+            width: 40%;
+        }
+
+        .fast-container{
+            width: 80%;
+            height: 30%;
+            padding-right: 5%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .fast-container div{
+            width: 20%;
+            height: 70%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            background-color: var(--color--white);
+        }
+
+        .fast-container div span{
+            font-weight: 300;
+            color: var(--color--marron);
+            font-family: "Inter", serif;
+            font-size: 28px;
+        }
+
+        .fast-container div p{
+            font-size: 16px;
+            font-weight: 200;
+            opacity: .6;
+            font-family: "Inter", serif;
+        }
+
+        .fast-button{
+            width: 80%;
+            display: flex;
+            height: 10%;
+            align-items: center;
+        }
+
+        .fast-button button{
+            padding: 12px 15px;
+            background-color: var(--color--white);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all .2s ease;
+            border: 1px solid transparent;
+        }
+
+        .fast-button button:hover{
+            background-color: transparent;
+            border: 1px solid var(--color--white);
+            color: var(--color--white);
+        }
+    </style>
+
+    <section class="fast" id="fast">
+        <div class="fast-background"></div>
+        <div class="fast-titles">
+            <h1>Saiba por que usar o <b>piso vinilico</b> da Fast Drywall</h1>
+            <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+        </div>
+        <div class="fast-container">
+            <div>
+                <span>100%</span>
+                <p>Qualidades</p>
+            </div>
+            <div>
+                <span>100%</span>
+                <p>Qualidades</p>
+            </div>
+            <div>
+                <span>100%</span>
+                <p>Qualidades</p>
+            </div>
+            <div>
+                <span>100%</span>
+                <p>Qualidades</p>
+            </div>
+        </div>
+        <div class="fast-button">
+            <button>
+                Comprar agora
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+    </section>
+
+</body>
+</html>
