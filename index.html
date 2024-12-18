@@ -8,9 +8,23 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
     <title>Fast Steel Frame - Pisos Vinilicos</title>
 </head>
 <body>
+
+    <style>
+        @keyframes AnimationSeta {
+            0% {
+                transform: translateX(0);
+            }
+
+            50% {
+                transform: translateX(-50px);
+            }
+        }
+    </style>
 
     <style>
 
@@ -31,6 +45,18 @@
 
         html, body{
             font-family: "Inter", serif;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        ::-webkit-scrollbar{
+            width: 5px;
+            background-color: var(--color--black);
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background-color: var(--color--white);
+            width: 5px;
         }
 
         .home{
@@ -68,17 +94,16 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 1;
-            opacity: .4;
+            opacity: .2;
             background: #000000;
-            clip-path: polygon(20% 0%, 100% 0, 100% 100%, 20% 100%);
+            clip-path: polygon(100% 0, 0% 100%, 100% 100%);
         }
 
         .home-text{
-            padding-left: 25%;
             width: 100%;
             height: 100%;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
             flex-direction: column;
             gap: 10px;
@@ -93,7 +118,7 @@
 
         .home-text span{
             font-size: 16px;
-            font-weight: 100;
+            font-weight: 200;
             margin-top: -15px;
             color: var(--color--white);
             opacity: .8;
@@ -110,7 +135,7 @@
             gap: 10px;
             margin-top: 25px;
             cursor: pointer;
-            transition: all .2s ease;
+            transition: all .2s ease!important;
         }
 
         .home-text button:hover{
@@ -121,14 +146,14 @@
     </style>
 
     <section class="home" id="home">
-        <div class="home-background"></div>
+        <div class="home-background" data-aos="zoom-out-up" data-aos-delay="50"></div>
         <div class="home-text">
-            <h1>Pisos Vinilicos</h1>
-            <span>Adquira qualidade</span>
-            <button>
+            <h1 data-aos="fade-up" data-aos-delay="150">Pisos Vinilicos</h1>
+            <span data-aos="fade-up" data-aos-delay="250">Adquira qualidade</span>
+            <button data-aos="flip-up" data-aos-delay="700" onclick="window.location.href='#form'">
                 Comprar agora
                 <i class="bi bi-arrow-right"></i>
-            </button>
+            </button>            
         </div>
     </section>
 
@@ -167,7 +192,7 @@
         .diferenca-top div:nth-child(1) h1{
             font-weight: 300;
             font-size: 32px;
-            color: var(--color--black);
+            color: var(--color--marron);
             font-family: "Inter", serif;
         }
 
@@ -241,7 +266,8 @@
         }
 
         .diferenca-bottom div:nth-child(2) div:nth-child(1) h1 b{
-            font-weight: 400;
+            font-weight: 300;
+            color: var(--color--marron);
         }
 
         .diferenca-bottom div:nth-child(2) div:nth-child(1) p {
@@ -268,13 +294,19 @@
             justify-content: flex-start;
             flex-direction: column;
             gap: 0;
+            transition: all .2s ease;
+        }
+
+        .diferenca-bottom div:nth-child(2) div:nth-child(2) div:hover{
+            transform: scale(1.02);
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
         }
 
         .diferenca-bottom div:nth-child(2) div:nth-child(2) div img{
             width: 100%;
             height: 92%;
             object-fit: contain;
-            background-color: #00000005;
+            background-color: #00000010;
             padding: 50px;
         }
 
@@ -294,26 +326,26 @@
     <section class="diferenca" id="diferencas">
         <div class="diferenca-top">
             <div>
-                <h1>O que é?</h1>
-                <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+                <h1 data-aos="fade-right" data-aos-delay="200">O que é?</h1>
+                <p data-aos="fade-up" data-aos-delay="300">Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
             </div>
-            <div>
-                <button>
+            <div data-aos="flip-right" data-aos-delay="500">
+                <button onclick="window.location.href='#form'">
                     Comprar agora
                     <i class="bi bi-arrow-right"></i>
                 </button>
             </div>
         </div>
         <div class="diferenca-bottom">
-            <div>
-                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/68023e87-e33e-49c8-f3e1-df2a17714d00/public" >
+            <div data-aos="fade-up-right" data-aos-delay="800">
+                <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/68023e87-e33e-49c8-f3e1-df2a17714d00/public" style="border-radius: 0px 50px 50px 0 ;">
             </div>
             <div>
                 <div>
-                    <h1>Diferença entre <b>Piso Vinilico</b> e <b>Piso tradicional</b></h1>
-                    <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+                    <h1 data-aos="fade-up" data-aos-delay="500">Diferença entre <b>Piso Vinilico</b> e <b>Piso tradicional</b></h1>
+                    <p data-aos="fade-up-left" data-aos-delay="800">Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
                 </div>
-                <div>
+                <div data-aos="flip-up" data-aos-delay="1000">
                     <div>
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
                         <span>Piso Vinilico</span>
@@ -346,6 +378,7 @@
             padding: 2.5% 5%;
             flex-direction: column;
             gap: 20px;
+            border-radius: 15px;
         }
 
         .produtos-text{
@@ -382,6 +415,7 @@
             font-size: 40px;
             opacity: .8;
             cursor: pointer;
+            animation: AnimationSeta 3s linear infinite alternate-reverse;
         }
 
         .produtos-cards {
@@ -399,6 +433,12 @@
             justify-content: space-between;
             align-items: center;
             flex-direction: column;
+            transition: all .5s ease;
+            border-radius: 5px;
+        }
+
+        .produtos-card:hover{
+            transform: scale(1.05);
         }
 
         .produtos-card img{
@@ -439,30 +479,36 @@
             opacity: .8;
             font-family: "Inter", serif;
             cursor: pointer;
+            transition: all .2s ease;
         }
 
+        .produtos-cards div button:hover{
+            color: var(--color--black);
+            background-color: var(--color--white);
+            padding: 5px;
+        }
     </style>
 
     <section class="produtos" id="produtos">
         <div class="produtos-text">
             <div>
-                <h1>Conheça nossos <b>pisos</b></h1>
-                <p>Separamos apenas os melhores</p>
+                <h1 data-aos="fade-up-right" data-aos-delay="200">Conheça nossos <b>pisos</b></h1>
+                <p data-aos="fade-up-left" data-aos-delay="300">Separamos apenas os melhores</p>
             </div>
-            <div>
+            <div data-aos="fade-up" data-aos-delay="500">
                 <button>
                     <i class="bi bi-arrow-right"></i>
                 </button>
             </div>
         </div>
-        <div class="produtos-cards">
+        <div class="produtos-cards" data-aos="fade-up" data-aos-delay="800">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide produtos-card">
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
                         <div>
                             <span>Nome do piso</span>
-                            <button>
+                            <button onclick="window.location.href='#form'">
                                 Comprar agora
                                 <i class="bi bi-arrow-right"></i>
                             </button>
@@ -472,7 +518,7 @@
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
                         <div>
                             <span>Nome do piso</span>
-                            <button>
+                            <button onclick="window.location.href='#form'">
                                 Comprar agora
                                 <i class="bi bi-arrow-right"></i>
                             </button>
@@ -482,7 +528,7 @@
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
                         <div>
                             <span>Nome do piso</span>
-                            <button>
+                            <button onclick="window.location.href='#form'">
                                 Comprar agora
                                 <i class="bi bi-arrow-right"></i>
                             </button>
@@ -492,7 +538,7 @@
                         <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/e398a9b1-6f07-414e-201b-589a07d65c00/public">
                         <div>
                             <span>Nome do piso</span>
-                            <button>
+                            <button onclick="window.location.href='#form'">
                                 Comprar agora
                                 <i class="bi bi-arrow-right"></i>
                             </button>
@@ -519,6 +565,17 @@
 <!-- Fim da seção de produtos -->
 
     <style>
+
+        @keyframes AnimateSetaTop {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(50px);
+            }
+        }
+
         .beneficios{
             width: 100%;
             max-width: 1140px;
@@ -526,8 +583,8 @@
             left: 50%;
             top: 0;
             position: relative;
-            height: 100vh;
-            padding: 0.5% 0%;
+            height: 90vh;
+            padding: 5% 0%;
             display: flex;
             flex-direction: column;
             gap: 50px;
@@ -538,12 +595,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #000000;
+            background: linear-gradient(230deg, #3d2f20, var(--color--marron));
             color: var(--color--white);
+            border-radius: 15px;
         }
 
         .beneficios-title h1{
-            font-weight: 200;
+            font-weight: 100;
             font-size: 28px;
             width: 30%;
             text-align: center;
@@ -552,12 +610,12 @@
 
         .beneficios-title h1 b{
             font-weight: 200;
-            color: var(--color--marron);
+            color: var(--color--white);
         }
 
         .beneficios-container{
             width: 100%;
-            height: 55%;
+            height: auto;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -567,14 +625,20 @@
         .beneficios-card{
             width: 32%;
             height: 100%;
-            padding: 25px;
+            padding: 35px;
             background-color: var(--color--black);
             color: var(--color--white);
-            gap: 20px;
+            gap: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            border-radius: 15px;
+            transition: all .5s ease;
+        }
+
+        .beneficios-card:hover{
+            transform: scale(1.02) translateY(5px);
         }
 
         .beneficios-card div:nth-child(1){
@@ -586,13 +650,12 @@
             width: 100%;
         }
 
-        .beneficios-card div:nth-child(1) i {
-            font-size: 40px;
-            color: var(--color--marron);
+        .beneficios-card div:nth-child(1) img {
+            width: 60px;
         }
 
         .beneficios-card div:nth-child(1) h1 {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 200;
             font-family: "Inter", serif;
         }
@@ -633,6 +696,7 @@
         .beneficios-cta button i{
             font-size: 14px;
             opacity: 1;
+            animation: none;
         }
 
         .beneficios-cta button:hover{
@@ -645,44 +709,45 @@
             font-size: 32px;
             opacity: .4;
             cursor: pointer;
+            animation: AnimateSetaTop 4s linear infinite alternate-reverse;
         }
     </style>
 
     <section class="beneficios" id="beneficios">
-        <div class="beneficios-title">
-            <h1>Beneficios de <b>usar piso vinilicos</b></h1>
+        <div class="beneficios-title" data-aos="fade-up" data-aos-delay="200">
+            <h1 data-aos="fade-up" data-aos-delay="400">Beneficios de <b>usar piso vinilicos</b></h1>
         </div>
         <div class="beneficios-container">
-            <div class="beneficios-card">
+            <div class="beneficios-card" data-aos="flip-up" data-aos-delay="500">
                 <div>
-                    <i class="bi bi-arrow-up"></i>
-                    <h1>Titulo</h1>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ff0b34d7-4ea7-41af-3597-7d4de9923000/public" alt="som">
+                    <h1>Conforto térmico e acústico</h1>
                 </div>
                 <div>
-                    <p>Descrição...</p>
-                </div>
-            </div>
-            <div class="beneficios-card">
-                <div>
-                    <i class="bi bi-arrow-up"></i>
-                    <h1>Titulo</h1>
-                </div>
-                <div>
-                    <p>Descrição...</p>
+                    <p>O piso vinílico atua como isolante térmico e acústico, mantendo a temperatura do ambiente agradável e reduzindo ruídos, como passos ou objetos caindo. Essa característica é especialmente vantajosa em apartamentos ou casas onde se busca mais tranquilidade.</p>
                 </div>
             </div>
-            <div class="beneficios-card">
+            <div class="beneficios-card" data-aos="flip-up" data-aos-delay="1000">
                 <div>
-                    <i class="bi bi-arrow-up"></i>
-                    <h1>Titulo</h1>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/7fa17324-1351-44f6-3ab9-6a80b962b100/public" alt="imagem de piso">
+                    <h1>Fácil instalação e manutenção</h1>
                 </div>
                 <div>
-                    <p>Descrição...</p>
+                    <p>A instalação do piso vinílico é simples e rápida, podendo ser aplicada sobre pisos existentes sem a necessidade de remoção. Além disso, sua manutenção é descomplicada; basta um pano úmido e detergente neutro para mantê-lo limpo.</p>
+                </div>
+            </div>
+            <div class="beneficios-card" data-aos="flip-up" data-aos-delay="1500">
+                <div>
+                    <img src="https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/b103d3f3-abd8-4099-3ce0-654dbfb81300/public" alt="resistencia">
+                    <h1>Durabilidade e resistência</h1>
+                </div>
+                <div>
+                    <p>Feito de PVC, o piso vinílico é altamente durável, resistente a arranhões, impactos e desgaste. Com a instalação e manutenção adequadas, pode durar muitos anos, mantendo sua aparência original. </p>
                 </div>
             </div>
         </div>
-        <div class="beneficios-cta">
-            <button>
+        <div class="beneficios-cta" data-aos="flip-up" data-aos-delay="1500">
+            <button onclick="window.location.href='#form'">
                 Comprar agora
                 <i class="bi bi-arrow-right"></i>
             </button>
@@ -695,18 +760,18 @@
     <style>
         .fast{
             width: 100%;
-            width: 1140px;
+            max-width: 1140px;
             height: 100vh;
             transform: translateX(-50%);
             left: 50%;
             top: 0;
             position: relative;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
             justify-content: flex-start;
-            padding-right: 25px;
-            padding-top: 100px;
             flex-direction: column;
+            padding: 5%;
+            margin-bottom: 50px;
         }
 
         .fast-background{
@@ -720,6 +785,7 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: -1;
+            border-image: fill 0 linear-gradient(#0000, #fff);
         }
 
         .fast-background::before{
@@ -734,13 +800,13 @@
             background-position: center;
             background-repeat: no-repeat;
             z-index: 1;
-            opacity: .8;
+            opacity: .6;
             background: #000000;
-            clip-path: polygon(15% 0, 100% 0, 100% 80%, 15% 80%);
+            clip-path: polygon(2.5% 0, 97.5% 0, 97.5% 75%, 2.5% 75%);
         }
 
         .fast-titles{
-            width: 80%;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -771,7 +837,7 @@
         }
 
         .fast-container{
-            width: 80%;
+            width: 100%;
             height: 30%;
             padding-right: 5%;
             display: flex;
@@ -787,6 +853,13 @@
             justify-content: center;
             flex-direction: column;
             background-color: var(--color--white);
+            transition: all .2s ease;
+        }
+
+        .fast-container div:hover{
+            transform: scale(1.02) translateY(2px);
+            cursor: default;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
         }
 
         .fast-container div span{
@@ -794,6 +867,7 @@
             color: var(--color--marron);
             font-family: "Inter", serif;
             font-size: 28px;
+            transition: all 1s;
         }
 
         .fast-container div p{
@@ -804,7 +878,7 @@
         }
 
         .fast-button{
-            width: 80%;
+            width: 100%;
             display: flex;
             height: 10%;
             align-items: center;
@@ -828,39 +902,189 @@
             border: 1px solid var(--color--white);
             color: var(--color--white);
         }
+
     </style>
 
     <section class="fast" id="fast">
-        <div class="fast-background"></div>
+        <div class="fast-background" data-aos="fade-up" data-aos-delay="100"></div>
         <div class="fast-titles">
-            <h1>Saiba por que usar o <b>piso vinilico</b> da Fast Drywall</h1>
-            <p>Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
+            <h1 data-aos="fade-up-right" data-aos-delay="300">Saiba por que usar o <b>piso vinilico</b> da Fast Drywall</h1>
+            <p data-aos="fade-up-left" data-aos-delay="400">Descrição falado sobre a fats dryeall e porque escolher, Descrição falado sobre a fats dryeall e porque escolher</p>
         </div>
         <div class="fast-container">
-            <div>
-                <span>100%</span>
+            <div data-aos="fade-up-right" data-aos-delay="200">
+                <span class="counter" data-target="100">0%</span>
                 <p>Qualidades</p>
             </div>
-            <div>
-                <span>100%</span>
+            <div data-aos="fade-up-right" data-aos-delay="300">
+                <span class="counter" data-target="100">0%</span>
                 <p>Qualidades</p>
             </div>
-            <div>
-                <span>100%</span>
+            <div data-aos="fade-up-left" data-aos-delay="400">
+                <span class="counter" data-target="100">0%</span>
                 <p>Qualidades</p>
             </div>
-            <div>
-                <span>100%</span>
+            <div data-aos="fade-up-left" data-aos-delay="500">
+                <span class="counter" data-target="100">0%</span>
                 <p>Qualidades</p>
             </div>
         </div>
-        <div class="fast-button">
-            <button>
+        
+        <div class="fast-button" data-aos="fade-up-right" data-aos-delay="600">
+            <button onclick="window.location.href='#form'">
                 Comprar agora
                 <i class="bi bi-arrow-right"></i>
             </button>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const counters = document.querySelectorAll('.counter');
+
+    function startCounter(counter) {
+        const target = +counter.getAttribute('data-target');
+        let count = 0;
+        const increment = target / 100;
+
+        const updateCounter = () => {
+            count += increment;
+            if (count < target) {
+                counter.textContent = `${Math.ceil(count)}%`;
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = `${target}%`;
+            }
+        };
+
+        updateCounter();
+    }
+
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return rect.top >= 0 && rect.bottom <= window.innerHeight;
+    }
+
+    function checkCounters() {
+        counters.forEach(counter => {
+            if (isElementInViewport(counter) && !counter.classList.contains('counted')) {
+                startCounter(counter);
+                counter.classList.add('counted');
+            }
+        });
+    }
+
+    checkCounters(); // Verificar ao carregar a página
+
+    window.addEventListener('scroll', checkCounters); // Verificar durante o scroll
+});
+
+
+    </script>
+
+<!-- Fim da seção falando sobre a fast -->
+
+    <style>
+        .form{
+            width: 100%;
+            max-width: 1840px;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+            position: relative;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--color--black);
+        }
+
+        .contactForm{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+            width: 45%;
+            height: 80%;
+            background-color: var(--color--white);
+            color: var(--color--black);
+            padding: 25px;
+        }
+
+        .contactForm h1{
+            font-size: 32px;
+            font-weight: 200;
+            color: var(--color--black);
+        }
+
+        .contactForm div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .contactForm div input{
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-bottom: 1px solid var(--color--black);
+            background-color: transparent;
+        }
+
+        .contactForm div button{
+            padding: 12px 20px;
+            background-color: var(--color--black);
+            color: var(--color--white);
+            border: none;
+            cursor: pointer;
+            transition: all .2s ease;
+            border: 1px solid transparent;
+        }
+
+        .contactForm div button:hover{
+            background-color: transparent;
+            border: 1px solid var(--color--black);
+            color: var(--color--black);
+        }
+
+        .contactForm div span{
+            font-size: 12px;
+            color: var(--color--black);
+            opacity: .4;
+        }
+    </style>
+
+    <section class="form" id="form">
+         <form class="contactForm" id="contactForm">
+            <h1 data-aos="fade-up-right" data-aos-delay="100">Entrar em contato</h1>
+            <div data-aos="fade-up" data-aos-delay="500">
+                <input type="text" id="name" placeholder="Nome">
+                <input type="email" id="email" placeholder="E-mail">
+                <input type="tel" id="tel" placeholder="WhatsApp">
+                <button>Enviar</button>
+                <span>
+                    *Todas as informações são enviadas apenas para o meio de contato, todas as informações são enviadas apenas para o meio de contato
+                </span>
+            </div>
+         </form>
+    </section>
+
+<!-- Fim da seção de formulário -->
+
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+      duration: 1200,  // Defina o tempo de animação
+      once: true,      // Se você deseja que a animação aconteça apenas uma vez
+    });
+  </script>
+  
+
 
 </body>
 </html>
